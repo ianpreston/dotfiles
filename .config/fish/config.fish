@@ -17,4 +17,14 @@ alias gp "git pull"
 alias grep "egrep"
 alias fuckit "exit"
 
+function rustup
+    command sudo sh $HOME/Downloads/rustup.sh --prefix=/opt/rust
+end
+
+function rust_nightly
+    set -gx DYLD_LIBRARY_PATH "/opt/rust/lib"
+    set -gx PATH /opt/rust/bin $PATH
+    echo "Now using nightly rust"
+end
+
 alias antlr4 "java -jar /usr/local/lib/antlr-4.4-complete.jar"
