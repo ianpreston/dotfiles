@@ -14,9 +14,8 @@ set encoding=utf-8
 
 noremap ; :
 noremap , ;
+inoremap <C-Enter> <Esc>
 
-noremap 4 $
-noremap 6 ^
 noremap K 10k
 noremap J 10j
 
@@ -24,6 +23,25 @@ noremap <Right> gt
 noremap <Left> gT
 map <Up> <nop>
 map <Down> <nop>
+
+let mapleader = ' '
+noremap <Leader>w :w<Enter>
+noremap <Leader>a ^
+noremap <Leader>e $
+
+" fuck the police
+inoremap <C-a> <Esc>^i
+inoremap <C-e> <Esc>$i
+inoremap <C-n> <Esc>ji
+inoremap <C-p> <Esc>ki
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+noremap <C-a> ^
+noremap <C-e> $
+noremap <C-n> j
+noremap <C-p> k
+noremap <C-f> l
+noremap <C-b> h
 
 set scrolloff=15
  
